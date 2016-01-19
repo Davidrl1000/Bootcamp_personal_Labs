@@ -1,0 +1,48 @@
+/*Colors*/
+.color-grey{
+	background-color: #e9eae2;
+}
+.color-dark-grey{
+	background-color: #dfe0d9;
+}
+.color-light-grey{
+	background-color: #f7f7f3;
+}
+.color-orange{
+	background-color: #ebb240;
+}
+.color-white{
+	background-color: white;
+}
+.color-blue{
+	background-color: #718290;
+}
+.color-light-blue{
+	background-color: #7acec3;
+}
+.color-pink{
+	background-color: #ff9b6d;
+}
+.color-green{
+	background-color: #d4edbf;
+}
+
+/*Heihts*/
+.xl-height{
+	height: 645px;
+}
+.l-height{
+	height: 500px;
+}
+.m-height{
+	height: 465px;
+}
+.sm-height{
+	height: 390px;
+}
+.s-height{
+	height:300px;
+}
+.xs-height{
+	height: 250px;
+}
