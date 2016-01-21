@@ -1,0 +1,64 @@
+/*Louis XX David*/
+.louis {
+	background-image: url("../img/louis.png");
+	background-size: cover;
+	padding-left: 1.875rem; 
+	padding-top: 2.5rem;
+}
+
+.louis h2{
+	color: #FFF;
+	font-weight:lighter;
+	margin: 0;
+}
+
+.louis h2:first-child{
+	padding-bottom: 1rem; 
+}
+
+.louis img h2:last-of-type{
+	vertical-align: middle;
+}
+
+.louis h2:last-of-type{
+	padding-bottom: 2rem; 
+}
+
+.louis img{
+	padding-right: 1rem;
+}
+
+.louis h3{
+	font-weight:bold;
+}
+
+.louis h4, h5{
+	font-weight:lighter;
+}
+
+.louis h5{
+	color: #c27c7e;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	margin: 0;
+	padding-left: 5.7rem;
+}
+
+.louis h3, h4{
+	color: #FFF;
+	font-size: 1rem;
+	text-transform: uppercase;
+	display:inline-block;
+	margin: 0;
+}
+
+.louis h3:last-of-type, h4:last-of-type {
+	padding-bottom: 2.5rem;
+}
+
+.louis i{
+	font-size: 1.5rem;
+	color: #FFF;
+	padding-left: 6rem;
+	padding-bottom: 0.3rem;
+}
