@@ -1,0 +1,22 @@
+body{
+	background-color: #FEFE5E;
+}
+
+.deleteX{
+	cursor: pointer;
+	color: blue;
+}
+
+.deleteX:hover{
+	color: red;
+}
+
+button{
+	float: right;
+}
+
+li{
+	width: 200px;
+	list-style: none;
+	padding: 1rem;
+}
