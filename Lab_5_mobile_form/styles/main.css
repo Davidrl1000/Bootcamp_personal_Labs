@@ -1,0 +1,27 @@
+body{
+	background-color: #f3eeea;
+}
+
+h1{
+	color: #4494aa;
+	text-align: center;
+}
+
+label{
+	color:#e77e6d;
+}
+
+li{
+	list-style: none;
+	font-size: 2rem;
+	color: #4999af;
+	margin-bottom: 1rem;
+}
+
+input{
+	margin-bottom: 1rem;
+}
+
+.credit-card-information, .checkout-information{
+	display: none;
+}
