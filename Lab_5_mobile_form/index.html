@@ -20,15 +20,19 @@
     <form class="form">
       <label>Name: </label>
       <input type="text" id="user-name" class="form-control">
+      <h5 id="error-user-name"></h5>
 
       <label>Email: </label>
       <input type="email" id="user-email" class="form-control">
+      <h5 id="error-user-email"></h5>
 
       <label>Phone: </label>
       <input type="number" id="user-phone" class="form-control">
+      <h5 id="error-user-phone"></h5>
 
       <label>Address: </label>
       <input type="text" id="user-address" class="form-control">
+      <h5 id="error-user-address"></h5>
 
       <button class="btn btn-primary" type="button" id="submit-personal-information">Continue ></button>
     </form>
@@ -42,15 +46,19 @@
      <form class="form">
         <label>Name on card: </label>
         <input type="text" id="card-name" class="form-control">
+        <h5 id="error-card-name"></h5>
 
         <label>C.C.Number: </label>
         <input type="number" id="card-number" class="form-control">
+        <h5 id="error-card-number"></h5>
 
         <label>Valid thru: </label>
-        <input type="date" id="card-date" class="form-control">
+        <input type="month" id="card-date" class="form-control">
+        <h5 id="error-card-valid"></h5>
 
         <label>CCV: </label>
         <input type="number" id="card-ccv" class="form-control">
+        <h5 id="error-card-ccv"></h5>
 
         <button class="btn btn-primary" type="button" id="submit-card-information">Checkout</button>
       </form>
@@ -66,9 +74,10 @@
     <button class="btn btn-primary" type="button" id="return-to-init">Return to init</button>
   </div>
 
-  <h3 id="error"></h3>
+  <h4 id="error"></h4>
 
   <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
 
 </body>
 

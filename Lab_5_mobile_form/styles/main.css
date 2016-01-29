@@ -7,14 +7,22 @@ h1{
 	text-align: center;
 }
 
-label{
+h4{
+	font-weight: bold;
+}
+
+h5, h4{
+	text-align: center;
+	color: #da4d2f;
+}
+
+label, li{
 	color:#e77e6d;
 }
 
 li{
 	list-style: none;
 	font-size: 2rem;
-	color: #4999af;
 	margin-bottom: 1rem;
 }
 
