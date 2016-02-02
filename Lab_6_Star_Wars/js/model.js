@@ -5,7 +5,6 @@ function getCharacter(gender) {
 	function handleData(data) {
 
 		if(isValidGender(data.gender)){
-			console.log(data);
 			displayInformation(data,currentID);
 		}else{
 			init(nextNumber());
@@ -14,7 +13,6 @@ function getCharacter(gender) {
 	}
 
 	function handleError(xhr, ajaxOptions, thrownError) {
-	    //catchError(xhr.status+' - '+thrownError);
 	    init(nextNumber());
 	}
 
@@ -28,7 +26,7 @@ function getCharacter(gender) {
 
 	function nextNumber(){
 
-		if(currentID === 32){
+		if(currentID === 31){
 			return 1;
 		}else{
 			return parseInt(currentID)+1;
