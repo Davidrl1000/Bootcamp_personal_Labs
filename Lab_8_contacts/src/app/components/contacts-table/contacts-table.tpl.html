@@ -1,0 +1,29 @@
+<table st-table="rowCollection" class="table table-striped">
+	<thead>
+  	<tr>
+  		<th st-sort="contact">Name</th>
+  		<th>Email</th>
+  		<th>Phone</th>
+  		<th>Actions</th>
+  	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in cntctsTable.contactsList | orderBy:'contact'">
+		<td>{{row.contact}}</td>
+		<td>{{row.contEmail}}</td>
+		<td>{{row.contPhone}}</td>
+    <td>
+    	<button type="button" ng-click="cntctsTable.showContact({object:row})" class="btn btn-xs btn-success">
+    		<i class="glyphicon glyphicon-eye-open">
+    		</i>
+    	</button>
+		</td>
+    <td>
+    	<button type="button" ng-click="cntctsTable.deleteContact({object:row})" class="btn btn-xs btn-danger">
+    		<i class="glyphicon glyphicon-remove-circle">
+    		</i>
+    	</button>
+		</td>
+	</tr>
+	</tbody>
+</table>

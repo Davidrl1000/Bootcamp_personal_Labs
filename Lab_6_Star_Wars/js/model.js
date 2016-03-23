@@ -8,13 +8,13 @@ function getCharacter(gender) {
 			displayInformation(data,currentID);
 		}else{
 			init(nextNumber());
-		}
+		}//en if-else
 
-	}
+	}//end handleData
 
 	function handleError(xhr, ajaxOptions, thrownError) {
 	    init(nextNumber());
-	}
+	}//end handleError
 
 	function isValidGender(characterGender){
 		if(characterGender === gender){
@@ -47,11 +47,10 @@ function getCharacter(gender) {
 		        error:handleError
 		    })
 
-	}
+	}//end init
 
 	return {
 		init: init
 	};
 
-}
-
+}//end getCharacter

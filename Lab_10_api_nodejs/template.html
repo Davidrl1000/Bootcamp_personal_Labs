@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Latest Posts 9GAG</h1>
+
+    {% for art in articles %}
+
+        <article {% if loop.first %} class="first"{% endif %}>
+
+          <h3><p><a href="{{ art.link }}" style="text-decoration: none" target="_blank">{{ art.caption }}</a></p></h3>
+
+          {% if art.media %}
+            <video width="500" controls>
+              <source src="{{ art.media }}" type="video/mp4">
+            </video>
+          {% else %}
+            <a href="{{ art.link }}" target="_blank">
+              <img src="{{ art.image }}" alt="{{ art.caption }}">
+            </a>
+          {% endif %}
+
+        </article>
+
+    {% endfor %}
+
+  </body>
+</html>

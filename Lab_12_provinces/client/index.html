@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="provincesApp">
+<head>
+  <title>Provinces</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-controller="MainController as mc">
+
+  <header>
+    <h1>CR Provinces</h1>
+  </header>
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{mc.province.name}}
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li ng-repeat="province in mc.provinces" ng-click="mc.selectedProvince(province)"><a href="#">{{province.name}}</a></li>
+    </ul>
+  </div>
+
+  <h2>Cantones</h2>
+  <table st-table="rowCollection" class="table table-striped">
+  	<thead>
+    	<tr>
+    		<th st-sort="contact">Name</th>
+    		<th>Area</th>
+    		<th>Pop.</th>
+    	</tr>
+  	</thead>
+  	<tbody>
+  	<tr ng-repeat="row in mc.province.cantones | orderBy:'name'">
+  		<td>{{row.name}}</td>
+  		<td>{{row.area}}</td>
+  		<td>{{row.pop}}</td>
+  	</tr>
+  	</tbody>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

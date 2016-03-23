@@ -1,0 +1,52 @@
+body{
+  background-color: #f3eeea;
+  text-align: center;
+}
+
+body label{
+  color: green;
+}
+
+header h1{
+  color: green;
+  font-weight: bold;
+}
+
+.row-style{
+  text-align: center;
+}
+
+.note-checked{
+  background-color: red;
+  border-color: red;
+}
+
+.note-unchecked{
+  background-color: #FEFE5E;
+  border-color: #FEFE5E;
+}
+
+.note-unchecked, .note-checked{
+  border-radius: 5px;
+  word-wrap: break-word;
+  border-style: solid;
+  border-width: .7rem;
+  margin: 1rem;
+}
+
+.note-unchecked:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.note-unchecked h4, .note-checked h4{
+  font-weight: bold;
+  margin: 0;
+}
+
+.note-unchecked p, .note-checked p{
+  text-align: left;
+}
+
+.note-col{
+  padding: 0;
+}

@@ -1,0 +1,22 @@
+body{
+  text-align: center;
+}
+
+header h1{
+  color: green;
+}
+
+h2{
+  color: brown;
+}
+
+th{
+  text-align: center;
+  color: #0095B1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}

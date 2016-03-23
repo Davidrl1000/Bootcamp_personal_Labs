@@ -1,0 +1,25 @@
+<div class="col-md-3 note-unchecked" ng-class="{ 'note-unchecked': no-done, 'note-checked': done }" ng-repeat="listItem in ctrlList.todoList">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+        <h4>{{listItem.task}}</h4>
+      </div>
+      <div class="col-md-1 note-col">
+        <input type="checkbox" ng-click="ctrlList.changeState({object:listItem})" ng-model="done"/>
+      </div>
+      <div class="row">
+        <div class="col-md-12 note-col">
+          <p>{{listItem.desc}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 note-col">
+          <p>{{listItem.date}}</p>
+        </div>
+        <div class="col-md-1 note-col">
+          <button type="button" class="btn btn-danger btn-xs">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

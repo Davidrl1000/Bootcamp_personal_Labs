@@ -1,0 +1,87 @@
+<div class="dau" ng-controller="modal as vmModalControler">
+  <button type="button" class="btn btn-custom" ng-click="vmModalControler.abrir()">New contact</button>
+  <script type="text/ng-template" id="/myModalContent.html">
+      <div class="modal-header">
+          <h3 class="modal-title">New contact</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+             <label>Name</label>
+             <input type="text" class="form-control" ng-model="modalCtrl.contact.name">
+            </div>
+          <input type="text" ngmodel="modalCtrl.contact.id" ng-hide="true"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" type="button" ng-click="modalCtrl.save()">Save</button>
+        <button class="btn btn-danger" type="button" ng-click="modalCtrl.close()">Cancel</button>
+    </div>
+  </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" ng-controller="MainController as mc">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <div class="jumbotron text-center">
+    <p class="animated infinite" ng-class="main.classAnimation">
+      <button type="button" class="btn btn-lg btn-success add-user-button" ng-click="mc.addContactFormShow()"></button>
+    </p>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+
+          <form>
+            <fieldset ng-show="mc.showAddContactForm">
+
+              <!-- add-contact -->
+               <add-contact contact-information="mc.contactInformation" form-type="mc.buttonAddContact" error-message="mc.addContactError" new-Contct="mc.addContact(name,email,phone)" hide-form="mc.addContactFormhide()"></add-contact>
+              <!-- add-contact -->
+
+            </fieldset>
+
+            <fieldset ng-show="!mc.showAddContactForm">
+
+              <!-- show-contact -->
+               <show-contact contact-information="mc.contactInformation" edit-contact="mc.editContact(object)"></show-contact>
+              <!-- show-contact -->
+
+            </fieldset>
+          </form>
+
+        </div>
+
+        <div class="col-md-8">
+
+          <!-- contacts-table -->
+           <contacts-table contacts-list="mc.contacts" delete-contact="mc.deleteContact(object)" show-contact="mc.showContact(object)"></contacts-table>
+          <!-- contacts-table -->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

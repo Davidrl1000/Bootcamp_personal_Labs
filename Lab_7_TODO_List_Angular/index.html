@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="" ng-app="TODOList">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TODO List</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+
+  <body ng-controller="mainCtrl as vm">
+
+    <header>
+      <h1>TODO List</h1>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <form class="form-inline">
+            <div class="form-group">
+
+              <label>New task: </label>
+              <input class="form-control" type="text" placeholder="Task Title" ng-model="title">
+              <textarea class="form-control" rows="2" type="text" placeholder="Task Description" ng-model="description"></textarea>
+              <button type="button" ng-click="vm.addObject(title,description)" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="row row-style">
+        <div class="col-md-10 col-md-offset-1">
+
+          <!-- TODO -->
+           <todo-main todo-list="vm.list" delete-object="vm.deleteObject(object)" change-state="vm.changeState(object)"></todo-main>
+          <!-- TODO -->
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="scripts/libs/angular.min.js"></script>
+    <script src="scripts/libs/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="common/directives/todo-main/todo-main.directive.js"></script>
+    <script type="text/javascript" src="scripts/validation.js">
+
+    </script>
+
+    <!-- endbuild -->
+  </body>
+</html>
